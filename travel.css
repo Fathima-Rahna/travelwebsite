@@ -99,6 +99,7 @@ header {
     justify-content: space-between;
     background: white;
     padding: 28px 12%;
+   height: 80px;
     transition: all .50s ease;
 
 }
@@ -108,35 +109,36 @@ header {
     align-items: center;
     margin-right: 3px;
     list-style: none;
+    text-decoration: none;
 }
 
 .logo span {
     font-size: 1.1rem;
     font-weight: 500;
     color: #000;
-    text-decoration: none;
+    
 }
 
 .navbar {
     display: flex;
 }
 
-.navbar li a {
+.navbar  a {
     color: black;
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 5px 0;
-    padding: 0px 30px;
+    padding: 4px 0;
+    padding: 0px 20px;
     transition: all .50s ease;
     list-style: none;
     text-decoration: none;
 }
 
-.navbar li a:hover {
+.navbar  a:hover {
     color: #2F80ED;
 }
-.navbar li a:active {
-    color: #2F80ED;
+.navbar  a.active {
+    color: black;
 }
 
 .main {
@@ -152,8 +154,24 @@ header {
     font-weight: 500;
     transition: all .50s ease;
 }
+.main .user{
+    background-color: white; 
+    color: #008CBA ; 
+    border: 2px solid #008CBA;
+    border-radius: 6px 6px;
+}
+.main .user:hover{
+    background-color:  #008CBA;
+    color: white;
+}
 .main .nayer{
-    background-color: blue;
+    background-color: var(--Blue-1, #2F80ED);
+    color:white;
+    border-radius: 6px 6px;
+}
+.main .nayer:hover{
+    background-color: #f2f2f2;
+    color:#008CBA
 }
 #menu-icon {
     font-size: 35px;
@@ -171,7 +189,7 @@ header {
         transition: 0.2s;
     }
 
-    .navbar li a {
+    .navbar  a{
         padding: 5px 0;
         margin: 0px 20px;
     }
@@ -190,10 +208,10 @@ header {
     .navbar {
         position: absolute;
         top: 100%;
-        right: 2%;
+        right: -100%;
         width: 270px;
-        height: 30vh;
-        background: #718fb6;
+        height: 29vh;
+        background: #2F80ED;
         display: flex;
         flex-direction:column;
         justify-content: flex-start;
@@ -202,24 +220,27 @@ header {
         backdrop-filter: blur(4.5px);
     }
 
-    .navbar li a{
+    .navbar  a{
+
         display: block;
-        margin: 12px 0;
+        margin: 8px 0;
         padding: 0px 25px;
         /* padding:20px 0 20px 40px; */
         transition: all .50s ease;
     }
 
-    .navbar li a:hover {
+    .navbar a:hover {
         color: var(white);
         transform: translateY(5px);
     }
 
     .navbar a.active {
+    
         color: var(white);
+        
     }
 
-    .navbar .open {
+    .navbar.open {
         right: 2%;
     }
 }
@@ -274,8 +295,8 @@ header {
 }
 
 .nutto {
-    background-color: blue;
-    border-radius: 2px;
+    background-color: var(--Blue-1, #2F80ED);
+    border-radius: 6px;
     color: black;
 
 }
@@ -288,7 +309,7 @@ button {
     /* padding: 1rem rem; */
     border: 2px solid #f2f2f2;
     text-transform: uppercase;
-    font-weight: 500px;
+    font-weight: 200px;
     font-size: 10px;
     letter-spacing: 1px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, .1);
@@ -314,7 +335,7 @@ button {
     }
 
     &::before {
-        background-color: grey;
+        background-color: white;
         height: 100%;
         z-index: -2;
     }
@@ -389,9 +410,12 @@ button {
     }
 
     .home {
-        margin-left: 20px;
-        margin-right: 20px;
+        /* margin-left: 20px;
+        margin-right: 20px; */
         height: 500px;
+        /* background-size: cover;
+        background-position: center;
+        position: relative; */
     }
 
     .home p {
@@ -477,7 +501,7 @@ button {
 
 @media(max-width:584px) {
     .alert {
-        margin-top: 250px;
+        margin-top: 300px;
     }
 }
 
@@ -620,12 +644,31 @@ button {
 }
 
 .footer {
-    width: 90%;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 30px;
+    margin-bottom: 50px;
 }
-
+.last {
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
+    background-color:#EBEBEB;
+  
+    
+    height:30px;
+   
+    
+}
+.last {
+    
+   text-align: right;
+   padding-right: 3px;
+  
+    
+}
 .homer {
 
     width: 80%;
@@ -807,7 +850,8 @@ button {
 .footer-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    align-items: start;
     margin-top: 40px;
     padding-top: 0%;
     /* flex-wrap: wrap; */
@@ -837,6 +881,7 @@ button {
 @media(max-width:700px) {
     .footer-row {
         flex-direction: column;
+        align-items: center;
 
     }
 }
